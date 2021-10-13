@@ -22,12 +22,19 @@ export class HttpService {
   }
 
   postRequest(url: string, data: any, option?: any): Observable<any> {
-    return this.http.post(url, data, option);
+    return this.http.post(url, data, option)
+    .pipe(
+      catchError(this.handleError)
+    )
   }
 
   updateRequest(url: string, data: any, option?: any): Observable<any> {
-    return this.http.put(url, data, option);
+    return this.http.put(url, data, option)
+    .pipe(
+      catchError(this.handleError)
+    )
   }
+
   handleError(error: HttpErrorResponse) {
     if (error.status === 0) {
       // A client-side or network error occurred. Handle it accordingly.

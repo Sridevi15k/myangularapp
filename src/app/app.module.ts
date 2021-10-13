@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { TruncatePipe } from './truncate.pipe';
 import { HttpClientModule } from '@angular/common/http';
+import { UserComponent } from './user/user.component';
 
 //app.module.ts is the root module. 
 //every application must have at least one root level module that bootstraps (create) application.
@@ -16,7 +17,8 @@ import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
-    TruncatePipe
+    TruncatePipe,
+    UserComponent
   ],
   
   //some modules can be used as shared modules by exporting and importing.

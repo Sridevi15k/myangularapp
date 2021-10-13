@@ -1,0 +1,10 @@
+
+<!--user component is rendering the object and listening for the values in app component-->
+<!--because userObject is passed to user @Input decorator in user.component.ts-->
+<h1>{{ user.name }}</h1>
+<h1>{{ user.age }}</h1>
+<h1>{{ user.id }}</h1>
+
+<div [ngClass]="isColored ? 'colored' : ''">Attribute Directives</div>
+<!--to trigger sendUserEvent in user.component.ts-->
+<button (click)="sendUserEvent()">Send User Event</button>
